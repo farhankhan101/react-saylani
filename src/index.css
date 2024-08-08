@@ -1,0 +1,310 @@
+body.light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.dark {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+/*header*/
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient backgrounds for light and dark themes */
+.header.light {
+  background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%);
+}
+
+.header.dark {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+}
+
+/* Custom styles for navbar */
+.custom-navbar {
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navbar link styles */
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-link {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #7300fff3; /* Vibrant color on hover */
+}
+
+/* Animation for bottom line */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #7300fff3;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Navbar brand styles */
+.navbar-brand {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #7300fff3; /* Vibrant color on hover */
+}
+
+/* Button styles */
+.theme-toggle-btn {
+  border-radius: 50%;
+  border: 1px solid #7300fff3;
+  color: #7300fff3;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #7300fff3;
+  color: #fff;
+  border: none;
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Adjust size of the icon */
+.theme-toggle-btn .fa-icon {
+  font-size: 1rem; /* Adjust icon size */
+}
+
+/* carousel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-text h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.carousel-text button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff6347; /* Tomato color for the button */
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.carousel-text button:hover {
+  background: #ff4500; /* Darker tomato color on hover */
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+/* src/components/CardList.css */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding-top: 16px;
+  /* border: 1px solid; */
+}
+/* src/components/Card.css */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 255px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 60%; /* Adjust the height as needed */
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+  text-align: center;
+  height: 40%; /* Adjust the height as needed */
+}
+
+.card-text {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.card-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  padding: 20px 0;
+  background-color: #343a40;
+  color: #f8f9fa;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays above other content */
+  transition: background-color 0.3s, color 0.3s;
+}
+.footer .container{
+  display: flex;
+  justify-content: space-between;
+}
+.main {
+  padding: 20px 0;
+}
+
+.footer.light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.footer.dark {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.social-icons a {
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
